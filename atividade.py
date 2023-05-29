@@ -2,9 +2,7 @@ import pandas as pd
 import csv
 import streamlit as st
 
-arquivo = open('JoaoInsta.csv')
-print(arquivo)
-dataframe = arquivo
+dataframe = pd.read_csv('JoaoInsta.csv')
 
 st.title('Análise do Instagram de João Campos')
 
