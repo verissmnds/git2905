@@ -4,5 +4,5 @@ import streamlit as st
 st.title('Análise do Instagram de João Campos')
 st.write("AS 10 PUBLICAÇÕES COM MAIOR ENGAJAMENTO")
 
-interactions = df[['Link', 'Post Created Date', 'Total Interactions']]
-interactions.sort_values(by='Total Interactions', ascending=False).head(10)
+likes = df[['Link', 'Post Created Date', 'Likes']]
+likes.sort_values(by='Likes', ascending=False).head(10)
