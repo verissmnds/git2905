@@ -1,12 +1,14 @@
-import pandas as pd
 import csv
-import streamlit as st
+import pandas as pd
 
-dataframe = pd.read_csv('JoaoInsta.csv')
+df = pd.read_csv('Joao.csv')
+display(df)
 
 st.title('Análise do Instagram de João Campos')
+st.write("AS 10 PUBLICAÇÕES COM MAIOR ENGAJAMENTO")
 
-st.write("AS 10 PUBLICAÇÕES MAIS ENGAJADAS")
+df['Total Interactions'] = df['Total Interactions'].apply(lambda x: x.replace(',', ''))
+df['Total Interactions'] = df['Total Interactions'].astype(int)
 
-likes = dataframe[['Link', 'Post Created Date', 'Likes']]
-likes.sort_values(by='Likes', ascending=False).head(10)
+interactions = df[['Link', 'Post Created Date', 'Total Interactions']]
+interactions.sort_values(by='Total Interactions', ascending=False).head(10)
