@@ -1,7 +1,7 @@
 import csv
 import pandas as pd
 
-df = pd.read_csv('Joao.csv')
+df = pd.read_csv('JoaoCampos (2).csv')
 display(df)
 
 st.title('Análise do Instagram de João Campos')
