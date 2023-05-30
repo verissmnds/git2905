@@ -1,5 +1,6 @@
 import csv
 import pandas as pd
+import streamlit as st
 
 df = pd.read_csv('JoaoCampos (2).csv')
 display(df)
