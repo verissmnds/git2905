@@ -1,11 +1,8 @@
-import streamlit as st 
 import pandas as pd
-
-df = pd.read_csv('Joao.csv.csv')
+import streamlit as st 
 
 st.title('Análise do Instagram de João Campos')
-st.write('As 10 publicações com maior engajamento')
+st.write('Analisando o engajamento da Campanha Permanente do prefeito de João Campos')
 
-likes = df[['link','Post Created Date', 'Likes']]
-likes = likes.sort_values(by='Likes', ascending=False).head(10)
-st.dataframe(likes)
+dados = pd.read_csv('Joao.csv.csv')
+st.dataframe(dados)
